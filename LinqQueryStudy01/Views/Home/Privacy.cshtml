@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@model LinqQueryStudy01.Models.UserC
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" asp-controller="Home" asp-action="Privacy">
+    <div>
+        <label>@ViewBag.lists</label>
+    </div>
+    <div class="form-control">
+        <label>아이디</label>
+        <input type="text" asp-for="UserID" />
+        <span asp-validation-for="UserID"></span>
+    </div>
+
+    <div class="form-control">
+
+        <label>비밀번호</label>
+        <input type="password" asp-for="UserPW" />
+        <span asp-validation-for="UserPW"></span>
+    </div>
+
+    <div class="form-control">
+
+        <label>전화번호</label>
+        <input type="tel" asp-for="UserPhone" />
+        <span asp-validation-for="UserPhone"></span>
+    </div>
+
+    <div class="form-control">
+        <button class="btn-primary" type="submit">확인</button>
+    </div>
+
+</form>
